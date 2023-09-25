@@ -7,11 +7,14 @@ pip install -r requirements.txt
 
 ## Hướng dẫn sử dụng
 Để sử dụng giao diện, các bạn làm theo các bước sau đây:
-1. Bước 1: Mở terminal
-2. Bước 2: Gõ lệnh "python app.py"
-3. Bước 3: Truy cập vào localhost "http://127.0.0.1:5000/"
-4. Bước 4: Chọn tệp hình ảnh bạn muốn dự đoán
-5. Bước 5: Nhấn nút dự đoán và chờ kết quả hiển thị
+- Bước 1: Mở terminal
+- Bước 2: Gõ lệnh "python app.py"
+- Bước 3: Truy cập vào localhost "http://127.0.0.1:5000/"
+- Bước 4: Chọn tệp hình ảnh bạn muốn dự đoán
+- Bước 5: Nhấn nút dự đoán và chờ kết quả hiển thị
 
 ## Tác giả
 - Ngô Công Huân
+
+## Link Github
+- https://github.com/NgoCongHuan/FacialRecognition.git
