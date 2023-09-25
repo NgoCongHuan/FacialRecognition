@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Predict Celebrity</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: url("static/images/nttu.png");
+            background-size:cover;
+        }
+
+        .box {
+            background-color: #ffffff;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            color: #26282a;
+            padding: 20px 20px;
+        }
+
+        .input-title, .output-title {
+            font-size: 30px;
+            font-weight: bold;
+            color: #02569B;
+        }
+
+        .choose-image {
+            padding-top: 10px;
+        }
+
+        .submit {
+            margin-top: 10px;
+        }
+
+        .celebrity {
+            font-size: 65px;
+            font-weight: 100;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #uploadedImage {
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box col-lg-12">
+        <div class="input col-lg-6">
+            <h1 class="input-title">DỰ ĐOÁN NGƯỜI NỔI TIẾNG</h1>
+
+            <form method="POST" enctype="multipart/form-data">
+                <input class="choose-image" type="file" name="image" id="imageUpload">
+
+                <!-- Hiển thị ảnh bằng JavaScript -->
+                <img id="uploadedImage" alt="image" width="300px" height="auto">
+                <br>
+                <input class="submit" type="submit" value="Dự đoán">
+            </form>
+            <p>{{ error }}</p>
+        </div>
+
+        <div class="output col-lg-6">
+            <h1 class="output-title">NGƯỜI NỔI TIẾNG LÀ:</h1>
+            <p class="celebrity">"{{ celebrity }}"</p>
+        </div>
+    </div>
+    
+    <script>
+        // Sự kiện khi người dùng chọn tệp ảnh
+        document.getElementById('imageUpload').addEventListener('change', function () {
+            var input = this;
+            var image = document.getElementById('uploadedImage');
+            
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    image.src = e.target.result;
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        });
+    </script>
+</body>
+</html>
