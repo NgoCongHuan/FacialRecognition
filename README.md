@@ -1,4 +1,4 @@
-# Dự đoán người nổi tiếng bằng thuật toán Convolutional Neural Network CNN
+# Dự đoán người nổi tiếng bằng thuật toán Convolutional Neural Network(CNN)
 Dự án này sử dụng mạng neural tích chập (CNN) để dự đoán và nhận diện khuôn mặt của những người nổi tiếng. Nó cũng bao gồm một giao diện người dùng sử dụng Flask, cho phép người dùng tải lên hoặc nhập hình ảnh và sau đó hiển thị kết quả dự đoán về xác xuất người nổi tiếng trong hình ảnh đó.
 
 ## Cài đặt
